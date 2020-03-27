@@ -1,0 +1,16 @@
+"dummy_passive"
+{
+	"BaseClass" 		"ability_datadriven"
+	"AbilityBehavior" 	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"Modifiers"
+	{
+		"dummy_modifier"
+		{
+			"Passive"	"1"
+			"States"
+			{
+
+			}
+		}
+	}
+}
