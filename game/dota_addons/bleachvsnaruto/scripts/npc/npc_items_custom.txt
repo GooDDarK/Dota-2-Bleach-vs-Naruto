@@ -1934,7 +1934,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"75"
+		"ItemCost"						"50"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
 		"ItemAliases"					"observer ward"
@@ -2003,7 +2003,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"100"
+		"ItemCost"						"75"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
 		"ItemAliases"					"sentry ward"
@@ -2011,9 +2011,13 @@
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"1"
+		"ItemStockMax"					"10"
+		"ItemStockInitial"				"4"
+		"ItemStockTime"					"70.0"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
 		"ItemSupport"					"1"
 		"IsTempestDoubleClonable"		"0"
+		"ShouldBeInitiallySuggested"	"1"
 
 		
 		// Special	
@@ -3586,7 +3590,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"		"6"
+				"bonus_attack_speed"		"5"
 			}
 		}
 	}
@@ -3735,7 +3739,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"aura_health_regen"		"4.5"
+				"aura_health_regen"		"3.5"
 			}
 			"05"
 			{
@@ -3813,7 +3817,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"1.75"
+				"mana_regen_aura"		"1.5"
 			}
 			"02"
 			{
@@ -4098,7 +4102,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_health_regen"		"3"
+				"aura_health_regen"		"2"
 			}
 			"06"
 			{
@@ -6011,6 +6015,7 @@
 		"ItemAliases"					"ags;ultimate;aghanim's scepter;ags"
 		//"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"		// heroes for whom this is a problem solve it in their code - ogre magi, meepo
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -6032,6 +6037,50 @@
 				"bonus_mana"			"175"
 			}
 		}
+	}
+
+	//=================================================================================================================
+	// Recipe: Scepter 2
+	//=================================================================================================================
+	"item_recipe_ultimate_scepter_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"270"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2000"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_ultimate_scepter_2"
+		"ItemRequirements"
+		{
+			"01"						"item_ultimate_scepter"
+		}
+	}
+	
+	//=================================================================================================================
+	// Scepter
+	//=================================================================================================================
+	"item_ultimate_scepter_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"271"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"                    "staff_of_faith"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"6200"
+		"ItemShopTags"					"int;str;agi;mana_pool;health_pool;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"ags;ultimate;aghanim's scepter;ags"
+		//"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"		// heroes for whom this is a problem solve it in their code - ogre magi, meepo
 	}
 
 	//=================================================================================================================
@@ -7695,12 +7744,12 @@
 			"13"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen_reduction_enemy"	"70"
+				"hp_regen_reduction_enemy"	"60"
 			}
 			"14"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"enemy_hp_drain"		"5"
+				"enemy_hp_drain"		"4"
 			}
 		}
 	}
@@ -9658,22 +9707,17 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cold_movement_speed"	"-35"
+				"cold_slow_melee"	"-20"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cold_attack_speed"		"-45"
+				"cold_slow_ranged"	"-45"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"cold_duration_melee"	"5.0"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"cold_duration_ranged"	"2.5"
+				"cold_duration"	"3.0"
 			}
 		}
 	}
@@ -9754,7 +9798,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"	
+		"ItemCost"						"300"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -10136,7 +10180,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"berserk_bonus_movement_speed"	"25"
+				"berserk_bonus_movement_speed"	"30"
 			}
 			"06"
 			{
@@ -10799,7 +10843,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"1.5"
+				"bonus_mana_regen"		"1.25"
 			}
 			"05"
 			{
@@ -11126,7 +11170,7 @@
 																																																																												 
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"0.0"
+		"AbilityCooldown"				"300.0"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -11134,15 +11178,17 @@
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
 		"ItemAliases"					"tome of knowledge"
-		"ItemStackable"					"1"
+		"ItemStackable"					"0"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"1"
 		"ItemDisplayCharges"			"1"
 		"ItemStockMax"					"3"
 		"ItemStockInitial"				"0"
 		"ItemStockTime"					"600.0"			  
-		"ItemInitialStockTime"			"690.0"
+		"ItemInitialStockTime"			"690.0"  
+		"BonusDelayedStockCount"		"1"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemSupport"					"1"	
 		"IsTempestDoubleClonable"		"0"
@@ -11155,7 +11201,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"xp_bonus"				"500"
+				"xp_bonus"				"700"
 			}
 			"02"
 			{
@@ -11365,7 +11411,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_armor_bonus"			"15"
+				"aura_armor_bonus"			"10"
 			}
 			"09"
 			{
@@ -11462,12 +11508,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"12"
+				"bonus_strength"		"10"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"12"
+				"bonus_agility"			"10"
 			}
 			"04"
 			{

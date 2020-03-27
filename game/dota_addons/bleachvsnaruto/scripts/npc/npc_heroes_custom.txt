@@ -2327,7 +2327,7 @@
   		 "LoadoutScale"		"0.9" 
   		 "Role"			"Carry,Disabler,Initiator,Durable,Nuker"
   		"Rolelevels"	"1,2,2,2,1"
-  		 "AttackDamageMin"   "53"
+  		 "AttackDamageMin"   "63"
   		  "AttackDamageMax"   "69"
   		  "AttackRate"    "2.000000"
   		  
@@ -2674,10 +2674,9 @@
 "Enabled"	"0" 
 
 } 
-"npc_dota_hero_abaddon"	{ 
-
+"npc_dota_hero_abaddon"	
+{ 
 "Enabled"	"0" 
-
 } 
 "npc_dota_hero_broodmother"	{ 
 
