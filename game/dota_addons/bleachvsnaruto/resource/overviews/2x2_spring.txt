@@ -1,0 +1,8 @@
+2x2_spring
+{
+	material materials/overviews/2x2_spring.vmat
+	pos_x -3776
+	pos_y 3776
+	scale 7.313
+}
+
