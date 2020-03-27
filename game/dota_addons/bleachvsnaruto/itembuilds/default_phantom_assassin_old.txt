@@ -1,0 +1,48 @@
+//Sakura
+"itembuilds/test_phantom_assassin.txt"
+{
+	"author"	"GooDDarK"
+	"hero"		"npc_dota_hero_phantom_assassin"
+	"Title"		"Naruto Dattebayo"
+
+	"Items"
+	{
+		"#DOTA_Item_Build_Starting_Items"
+		{
+			"item"    		"item_courier"
+			"item"    		"item_ward_observer"
+			"item"          "item_tango"
+			"item"          "item_tango"
+			"item"          "item_clarity"
+			"item"          "item_clarity"
+			"item"          "item_flask"
+			"item"          "item_null_talisman"
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+			"item"			"item_flying_courier"
+			"item"			"item_power_treads"
+			"item"			"item_blink"
+			"item"			"item_sobi_mask"
+			"item"          "item_ward_observer"
+			"item"   		"item_ward_sentry"
+		}
+		"#DOTA_Item_Build_Core_Items"
+		{
+			"item"   		"item_tpscroll"
+			"item"			"item_enchanted_mango"
+			"item"			"item_ultimate_orb"
+			"item"			"item_desolator"
+		}
+
+		"#DOTA_Item_Build_Luxury"
+		{
+			"item"			"item_sange_and_yasha"
+			"item"			"item_soul_ring"
+			"item"			"item_monkey_king_bar"
+			"item"          "item_hood_of_defiance"
+			"item"			"item_crimson_guard"
+		}		
+	}
+}

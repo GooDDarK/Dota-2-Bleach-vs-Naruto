@@ -1,0 +1,39 @@
+//Hidan
+"itembuilds/test_doom_bringer.txt"
+{
+	"author"	"GooDDarK"
+	"hero"		"npc_dota_hero_doom_bringer"
+	"Title"		"Naruto Dattebayo"
+
+	"Items"
+	{
+		"#DOTA_Item_Build_Starting_Items"
+		{
+			"item"    		"item_stout_shield"
+			"item"          "item_tango"
+			"item"          "item_clarity"
+			"item"          "item_flask"
+			"item"    		"item_gauntlets"
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+			"item"			"item_blink"
+			"item"          "item_belt_of_strength"
+			"item"          "item_heart"
+			"item"   		"item_boots"
+		}
+		"#DOTA_Item_Build_Core_Items"
+		{
+			"item"   		"item_tpscroll"
+			"item"			"item_blade_mail"
+			"item"			"item_ultimate_orb"
+		}
+
+		"#DOTA_Item_Build_Luxury"
+		{
+			"item"			"item_enchanted_mango"
+			"item"			"item_sange_and_yasha"
+		}	
+	}
+}

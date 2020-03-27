@@ -1,0 +1,47 @@
+//Onoki
+"itembuilds/test_sven.txt"
+{
+	"author"	"GooDDarK"
+	"hero"		"npc_dota_hero_sven"
+	"Title"		"Naruto Dattebayo"
+
+	"Items"
+	{
+		"#DOTA_Item_Build_Starting_Items"
+		{
+			"item"    		"item_courier"
+			"item"    		"item_ward_observer"
+			"item"          "item_tango"
+			"item"          "item_clarity"
+			"item"          "item_clarity"
+			"item"          "item_flask"
+			"item"          "item_null_talisman"
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+			"item"			"item_flying_courier"
+			"item"			"item_power_treads"
+			"item"          "item_belt_of_strength"
+			"item"          "item_ward_observer"
+			"item"   		"item_ward_sentry"
+		}
+		"#DOTA_Item_Build_Core_Items"
+		{
+			"item"   		"item_tpscroll"
+			"item"			"item_blink"
+			"item"			"item_wraith_band"
+			"item"          "item_ward_observer"
+			"item"   		"item_ward_sentry"
+		}
+
+		"#DOTA_Item_Build_Luxury"
+		{
+			"item"			"item_oblivion_staff"
+			"item"			"item_radiance"
+			"item"			"item_vanguard"
+			"item"			"item_headdress"
+			"item"			"item_tome_of_knowledge"
+		}	
+	}
+}

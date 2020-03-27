@@ -1,0 +1,45 @@
+//Sasuke
+"itembuilds/test_storm_spirit.txt"
+{
+	"author"	"GooDDarK"
+	"hero"		"npc_dota_hero_storm_spirit"
+	"Title"		"Naruto Dattebayo"
+
+	"Items"
+	{
+		"#DOTA_Item_Build_Starting_Items"
+		{
+
+			"item"          "item_tango"
+			"item"          "item_tango"
+			"item"          "item_clarity"
+			"item"          "item_clarity"
+			"item"          "item_flask"
+			"item"          "item_null_talisman"
+			"item"          "item_null_talisman"
+			"item"          "item_null_talisman"
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+			"item"			"item_bottle"
+			"item"			"item_boots"
+			"item"			"item_belt_of_strength"
+		}
+
+		"#DOTA_Item_Build_Core_Items"
+		{
+			"item"   		"item_tpscroll"
+			"item"   		"item_wraith_band"
+			"item"			"item_mantle"
+			"item"          "item_urn_of_shadows"
+		}
+
+		"#DOTA_Item_Build_Luxury"
+		{
+			"item"          "item_oblivion_staff"
+            "item"          "item_shivas_guard"
+            "item"   		"item_manta"
+		}		
+	}
+}

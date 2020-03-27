@@ -1,0 +1,41 @@
+//Anko
+"itembuilds/test_medusa.txt"
+{
+	"author"	"GooDDarK"
+	"hero"		"npc_dota_hero_medusa"
+	"Title"		"Naruto Dattebayo"
+
+	"Items"
+	{
+		"#DOTA_Item_Build_Starting_Items"
+		{
+			"item"    		"item_stout_shield"
+			"item"          "item_tango"
+			"item"          "item_clarity"
+			"item"          "item_flask"
+			"item"    		"item_gauntlets"
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+			"item"			"item_bottle"
+			"item"          "item_belt_of_strength"
+			"item"          "item_heart"
+			"item"   		"item_boots"
+		}
+		"#DOTA_Item_Build_Core_Items"
+		{
+			"item"   		"item_tpscroll"
+			"item"			"item_travel_boots"
+			"item"			"item_blade_mail"
+		}
+
+		"#DOTA_Item_Build_Luxury"
+		{
+			"item"			"item_ultimate_orb"
+			"item"			"item_enchanted_mango"
+			"item"			"item_sange_and_yasha"
+			"item"			"item_blink"	
+		}		
+	}
+}

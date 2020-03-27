@@ -1,0 +1,45 @@
+//Naruto
+"itembuilds/test_dragon_knight.txt"
+{
+	"author"	"GooDDarK"
+	"hero"		"npc_dota_hero_dragon_knight"
+	"Title"		"Naruto Dattebayo"
+
+	"Items"
+	{
+		"#DOTA_Item_Build_Starting_Items"
+		{
+			"item"          "item_tango"
+			"item"          "item_tango"
+			"item"          "item_clarity"
+			"item"          "item_clarity"
+			"item"          "item_flask"
+			"item"          "item_null_talisman"
+			"item"          "item_null_talisman"
+			"item"          "item_null_talisman"
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+		{
+			"item"			"item_power_treads"
+			"item"			"item_ring_of_health"
+			"item"			"item_relic"
+		}
+		"#DOTA_Item_Build_Core_Items"
+		{
+			"item"   		"item_tpscroll"
+			"item"			"item_maelstrom"
+			"item"			"item_monkey_king_bar"
+			"item"			"item_hood_of_defiance"
+			"item"			"item_vladmir"
+		}
+
+		"#DOTA_Item_Build_Luxury"
+		{
+			"item"			"item_enchanted_mango"
+			"item"			"item_ultimate_orb"
+			"item"			"item_lesser_crit"		
+			"item"			"item_soul_ring"	
+		}		
+	}
+}

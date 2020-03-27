@@ -1,0 +1,84 @@
+
+
+//Zabuza
+
+"itembuilds/test_bloodseeker.txt"
+
+{
+
+	"author"	"GooDDarK"
+
+	"hero"		"npc_dota_hero_bloodseeker"
+
+	"Title"		"Naruto Dattebayo"
+
+	"Items"
+
+	{
+
+		"#DOTA_Item_Build_Starting_Items"
+
+		{
+
+			"item"          "item_tango"
+
+			"item"          "item_clarity"
+
+			"item"          "item_flask"
+
+			"item"          "item_stout_shield"
+
+			"item"          "item_null_talisman"
+
+			"item"          "item_null_talisman"
+
+		}
+
+		"#DOTA_Item_Build_Early_Game"
+
+		{
+
+			"item"			"item_phase_boots"
+
+			"item"			"item_belt_of_strength"
+
+			"item"			"item_helm_of_the_dominator"
+
+		}
+
+		"#DOTA_Item_Build_Core_Items"
+
+		{
+
+			"item"   		"item_tpscroll"
+
+			"item"			"item_recipe_ancient_janggo"
+
+			"item"			"item_sange_and_yasha"
+
+			"item"			"item_enchanted_mango"
+
+		}
+
+		"#DOTA_Item_Build_Luxury"
+
+		{
+
+			"item"			"item_ultimate_orb"
+
+			"item"			"item_vanguard"
+
+			"item"			"item_abyssal_blade"
+
+			"item"			"item_soul_ring"
+
+			"item"			"item_echo_sabre"
+
+			"item"			"item_manta"	
+
+		}		
+
+	}
+
+}
+
