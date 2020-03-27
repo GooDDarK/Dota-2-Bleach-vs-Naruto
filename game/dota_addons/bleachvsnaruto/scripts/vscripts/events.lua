@@ -53,15 +53,16 @@ function GameMode:OnGameRulesStateChange(keys)
   
   local newState = GameRules:State_Get()
   
-  if newState == 4 then
+  if newState == 4 then -- если игра началась - заменяет стандартные модели куррьеров на модели, указанные в "FindByModel"
   print ("state")
      --local shopkeeper = Entities:FindByModel(nil, "models/heroes/shopkeeper/shopkeeper.vmdl")
      --shopkeeper:SetModelScale(2.4)
      --local shopkeeper_dire = Entities:FindByModel(nil, "models/heroes/shopkeeper_dire/shopkeeper_dire.vmdl")
      --shopkeeper_dire:SetModelScale(2.4)
-  end
+  end -- По непонятной причине это вызывает ошибку, так что видимо нужно изменять модель как-то по-другому...
   
-  if GetMapName() == "dota" then
+  --Пишет определенный приветственный текст в чате, когда игра начинается. Редактировать текст в файле settings.lua Перевод текста на разные языки осуществляется в resource/addon_russian.txt или addon_english.txt
+  if GetMapName() == "dota" then 
   if GameRules:State_Get() == DOTA_GAMERULES_STATE_PRE_GAME then
 		GameRules:SendCustomMessage(_G.helpText1, 2, 3)
 		GameRules:SendCustomMessage(_G.helpText2, 2, 3)
@@ -100,23 +101,23 @@ function GameMode:OnNPCSpawned(keys)
     end
 	
 if npc then
-   if GetMapName() == "duel" or GetMapName() == "2x2" then
-	if npc:IsRealHero() and npc.bFirstSpawned == nil then
-	    npc:AddNewModifier(npc, nil, 'modifier_global_boost', nil)
-		npc:AddItemByName("item_courier")
-		npc.bFirstSpawned = true
+   if GetMapName() == "duel" or GetMapName() == "2x2" then --Если была выбрана карта 2х2 или дуэль, то в начале игры каждому игроку выдается курьер и баф на опыт и голду, а каждому курьеру дается баф на скорость.
+	if npc:IsRealHero() and npc.bFirstSpawned == nil then --если нпс является игроком и заспавнился впервые за игру
+	    npc:AddNewModifier(npc, nil, 'modifier_global_boost', nil) --тогда даем им баф
+		npc:AddItemByName("item_courier") --и даем курьера
+		npc.bFirstSpawned = true --и говорим, что этот герой был заспавнен, дабы курьер и баф не выдавались повторно после возрождения героя
 	end
-	if npc:GetUnitName() == "npc_dota_courier" then
+	if npc:GetUnitName() == "npc_dota_courier" then --если это курьер
 		print ("courier")
-	    npc:AddNewModifier(npc_dota_courier, nil, 'modifier_courier_speed', nil)
+	    npc:AddNewModifier(npc_dota_courier, nil, 'modifier_courier_speed', nil) --даем ему баф на скорость
 	end
    end
 		
 	local player = "-1"
 	if npc:IsHero() and npc:GetPlayerID() then
-          if PlayerResource:GetSteamAccountID(npc:GetPlayerID()) == 111179147 then
-              npc:SetCustomHealthLabel("Game Creator", 192, 30, 255)
-			  if npc:GetUnitName() == "npc_dota_hero_ogre_magi" then
+          if PlayerResource:GetSteamAccountID(npc:GetPlayerID()) == 111179147 then --Проверяю steam id игрока, если совпадает с например 111179147, то у него над головой будет надпись "Game Creator" например.
+              npc:SetCustomHealthLabel("Game Creator", 192, 30, 255) --Цифры регулируют цвет надписи по RGB палитре
+			  if npc:GetUnitName() == "npc_dota_hero_ogre_magi" then --Если выбран Мадара (который заменяет огр мага)
 			    npc:AddItemByName("item_madara_6path_essence") --даю эссенцию Мадары
 			  end
           end
@@ -147,6 +148,7 @@ if npc then
 	end
 	end
 	
+	--Тут в общем было лень думать как по-другому сделать, чтоб у куклы Карасу Канкуро скиллы апались по мере апа самого скилла пизыва Карасу. По хорошему это надо сделать по-другому...
 	if npc:GetUnitName() == "npc_dota_lone_druid_bear1" then
 		npc:FindAbilityByName("venomancer_poison_nova"):SetLevel(1)
 		npc:FindAbilityByName("karasu_daggers"):SetLevel(1)
@@ -259,21 +261,22 @@ function GameMode:OnItemPurchased( keys )
     GameMode:ForeheadProtectorOnItemPickedUp(player, itemName)
   end 
 
-  if itemName == "item_flying_courier" then
-    Timers:CreateTimer( 0.5, function()
-        local flying_courier = Entities:FindByModel(nil, "models/props_gameplay/donkey_wings.vmdl")
-        flying_courier:SetModelScale(1.2)
-        return nil
-     end
-     )
+
+  if itemName == "item_flying_courier" then --этот код изменяет модель летающих курьеров, из-за этого возможно тоже будет ошибка, но это не точно, проверьте сами
+    --Timers:CreateTimer( 0.5, function()
+    --    local flying_courier = Entities:FindByModel(nil, "models/props_gameplay/donkey_wings.vmdl")
+    --    flying_courier:SetModelScale(1.2)
+    --    return nil
+     --end
+     --)
   end 
   if itemName == "courier_radiant_flying" then
-    Timers:CreateTimer( 0.5, function()
-        local flying_courier = Entities:FindByModel(nil, "models/props_gameplay/donkey_dire.vmdl")
-        flying_courier:SetModelScale(1.2)
-        return nil
-     end
-     )
+    --Timers:CreateTimer( 0.5, function()
+    --    local flying_courier = Entities:FindByModel(nil, "models/props_gameplay/donkey_dire.vmdl")
+    --    flying_courier:SetModelScale(1.2)
+    --    return nil
+    -- end
+    -- )
   end 
  
 end
