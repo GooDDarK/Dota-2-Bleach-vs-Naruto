@@ -2185,7 +2185,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"44"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
 		"Model"							"models/props_gameplay/tango.vmdl"
 		"Effect"						"particles/generic_gameplay/dropped_tango.vpcf"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
@@ -2205,8 +2205,8 @@
 		"ItemStackable"					"1"
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"3"
-		"SideShop"						"0"
 		"IsTempestDoubleClonable"		"0"
+		"ShouldBeInitiallySuggested"	"1"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -2219,23 +2219,13 @@
 			}
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"cast_range_ward"			"450"
-			}
-			"03"
-			{
 				"var_type"				"FIELD_FLOAT"
 				"buff_duration"			"16.0"
 			}
-			"04"
+			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"tooltip_charges"				"3"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"tooltip_range"			"165"
 			}
 		}
 	}
