@@ -101,17 +101,22 @@ function GameMode:OnNPCSpawned(keys)
     end
 	
 if npc then
-   if GetMapName() == "duel" or GetMapName() == "2x2" then --Если была выбрана карта 2х2 или дуэль, то в начале игры каждому игроку выдается курьер и баф на опыт и голду, а каждому курьеру дается баф на скорость.
 	if npc:IsRealHero() and npc.bFirstSpawned == nil then --если нпс является игроком и заспавнился впервые за игру
-	    npc:AddNewModifier(npc, nil, 'modifier_global_boost', nil) --тогда даем им баф
-		npc:AddItemByName("item_courier") --и даем курьера
-		npc.bFirstSpawned = true --и говорим, что этот герой был заспавнен, дабы курьер и баф не выдавались повторно после возрождения героя
+	    npc.bFirstSpawned = true --говорим, что этот герой был заспавнен, дабы курьер и баф не выдавались повторно после возрождения героя
+		GameMode:OnHeroInGame(npc)  
+		local point = npc:GetAbsOrigin()
+        local team = npc:GetTeam()
+        local unit = CreateUnitByName( "npc_dota_courier", point, true, npc, npc, team )
+        unit:SetControllableByPlayer(npc:GetPlayerID(), true) --Выдача курьера в инвентарь каждому игроку (код ниже) почему-то не работает, так что спавним каждому игроку собственного курьера
+		--npc:AddItemByName("item_courier") --и даем курьера
 	end
-	if npc:GetUnitName() == "npc_dota_courier" then --если это курьер
+	if GetMapName() == "duel" or GetMapName() == "2x2" then --Если была выбрана карта 2х2 или дуэль, то в начале игры каждому курьеру дается баф на скорость, а игроку баф на опыт и голду.
+	    npc:AddNewModifier(npc, nil, 'modifier_global_boost', nil) --даем игрокам баф на опыт и голду
+	 if npc:GetUnitName() == "npc_dota_courier" then --если это курьер
 		print ("courier")
 	    npc:AddNewModifier(npc_dota_courier, nil, 'modifier_courier_speed', nil) --даем ему баф на скорость
+	 end
 	end
-   end
 		
 	local player = "-1"
 	if npc:IsHero() and npc:GetPlayerID() then
