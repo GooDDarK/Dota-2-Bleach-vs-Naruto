@@ -2,6 +2,8 @@
 
 <a href='https://hostingkartinok.com/show-image.php?id=cbca52fa7bdc79df92d72bbaf05012be' title='разместить картинку'><img style="width:100%" src='https://s8.hostingkartinok.com/uploads/images/2018/12/cbca52fa7bdc79df92d72bbaf05012be.jpg' alt='Yes'  /></a>
 
+For English speakers - just use Google translator с;
+
 Выкладываю исходники своей кастомки [Bleach vs Naruto](https://steamcommunity.com/sharedfiles/filedetails/?id=920406882)
 
 Надеюсь, что кто-нибудь сможет продолжить моё дело, т.к. у меня нету времени на её поддержание, однако очень хотелось бы увидеть и поиграть в хорошую и живую кастомку по Бличу и/или Наруто на уровне кастомок в Warcraft 3!
